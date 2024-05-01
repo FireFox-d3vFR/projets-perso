@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fichiers sources ~ CSS -->
+    <link rel="icon" type="image/png" href="localisation.png" />
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fichier CSS ~ BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fichier CSS ~ Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="leaflet.awesome-markers.css">
+
+    <title>Location - JSON</title>
+</head>
+<body>
+    <div class="container">
+        <!-- API - Géolocalisation -->
+        <div id="locationData" class="text-center">
+            <button class="location">
+                <div class="btn-fill"></div>
+                <span class="btn-txt">Get Location</span>
+            </button>
+        </div>
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" style="display: none; " placeholder="Rechercher un lieu">
+                    <button id="searchButton" class="btn btn-primary" style="display: none;">Rechercher</button>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <div id="map" style="display: none; width: 100%; height: 400px;"></div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col">
+                <button id="resetButton" class="btn btn-primary" style="display: none;">Réinitialiser la localisation</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fichier JavaScript ~ JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/bloodhound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+
+    <!-- Fichier JavaScript ~ Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Fichier JavaScript ~ Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="leaflet.awesome-markers.js"></script>
+    <!-- Typeahead.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typeahead.js/dist/typeahead.bundle.min.js"></script>
+    <!-- Fichier Source ~ JavaScript -->
+    <script src="maps.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+}
+
+#maCarte {
+    height: 100vh; /* Création de l'hauteur de la carte */
+}

@@ -1,0 +1,76 @@
+:root {
+    --color-1: #f0f0f0;
+    --color-2: #333;
+    --color-3: #007bff;
+    --color-4: #fff;
+    --color-5: #0056b3;
+
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-1);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: var(--color-1);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce */
+}
+
+h1 {
+    color: var(--color-2);
+    margin-top: 50px;
+}
+
+#gameDisplay {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+button:hover {
+    background-color: var(--color-5);
+}
+
+#startButton {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#guessButton {
+    border-radius: 5px;
+}
+
+#statusMessage {
+    top: 40px;
+    right: 20px;
+    border-radius: 5px;
+}
