@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background: #161616;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center center;
+}
+
+h1 {
+  display: flex;
+  color: #f5dad8;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  background: #f5dad8;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  aspect-ratio: 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.spinner.animate {
+  animation: rotate 6s linear infinite;
+}
+
+img.animate {
+  animation: bounce 0.2s linear infinite alternate;
+}
+
+#progressContainer {
+  width: 80%;
+  height: 8px;
+  background-color: #333;
+  position: relative;
+  margin: 20px auto;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background-color: #f5dad8;
+}
+
+#progressDot {
+  width: 10px;
+  height: 10px;
+  background-color: #f5dad8;
+  border-radius: 50%;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+#timeDisplay {
+  margin-top: 10px;
+  text-align: right;
+}
+
+#timeDisplay {
+    color: #fff;
+    font-size: 14px;
+}
+
+#timeDisplay span {
+  color: #fff;
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  margin: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+#controlsBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5dad8;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#controlsBtn:hover {
+    background-color: #333;
+    color: #f5dad8;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(10%);
+  }
+}
