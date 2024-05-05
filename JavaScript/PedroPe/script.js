@@ -5,8 +5,11 @@ const pedroCover = document.getElementById("pedroCover");
 const spinner = document.querySelector(".spinner");
 const playIcon = document.getElementById("playIcon");
 const pauseIcon = document.getElementById("pauseIcon");
+const typingEffect = document.getElementById("typingEffect");
+const text = "Pedro";
 
 let rotationAngle = 0;
+let index = 0;
 pauseIcon.style.display = "none";
 
 function updateRotationAngle() {
@@ -87,3 +90,13 @@ pedroImage.addEventListener("mouseleave", function () {
   pedroCover.style.transform = "rotateY(180deg)";
   pedroCover.style.opacity = 0;
 });
+
+function typeWriter() {
+  if (index < text.length) {
+    typingEffect.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100); // Vitesse de frappe (100ms)
+  }
+}
+
+typeWriter();

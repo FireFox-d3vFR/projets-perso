@@ -26,6 +26,17 @@ body {
     margin-bottom: 10px;
 }
 
+.centerText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#typingEffect::after {
+    content: "";
+    animation: typing 5s steps(40) forwards;
+}
+
 h1, p {
   display: flex;
   color: #f5dad8;
@@ -151,4 +162,13 @@ img.animate {
   to {
     transform: translateY(10%);
   }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
