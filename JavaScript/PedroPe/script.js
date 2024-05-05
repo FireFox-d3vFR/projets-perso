@@ -1,6 +1,7 @@
 const audio = document.getElementById("audio");
 const controlsBtn = document.getElementById("controlsBtn");
 const pedroImage = document.getElementById("pedroImage");
+const pedroCover = document.getElementById("pedroCover");
 const spinner = document.querySelector(".spinner");
 const playIcon = document.getElementById("playIcon");
 const pauseIcon = document.getElementById("pauseIcon");
@@ -73,4 +74,16 @@ audio.addEventListener("ended", function () {
   playIcon.style.display = "inline-block";
   pedroImage.classList.remove("animate");
   spinner.classList.remove("animate");
+});
+
+pedroImage.addEventListener("mouseenter", function () {
+  pedroImage.style.transform = "rotateY(180deg)";
+  pedroCover.style.transform = "rotateY(0)";
+  pedroCover.style.opacity = 1;
+});
+
+pedroImage.addEventListener("mouseleave", function () {
+  pedroImage.style.transform = "rotateY(0)";
+  pedroCover.style.transform = "rotateY(180deg)";
+  pedroCover.style.opacity = 0;
 });
